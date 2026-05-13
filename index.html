@@ -69,17 +69,45 @@
             transform: translateY(-5px);
         }
 
-        h2 { color: var(--primary-green); }
+        h2 { color: var(--primary-green); margin-top: 40px; }
 
         .btn {
             display: inline-block;
             background: var(--primary-green);
             color: black;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             margin-top: 15px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 15px var(--primary-green);
+            transform: scale(1.05);
+        }
+
+        /* Pricing Table Styles */
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .rate-table th {
+            text-align: left;
+            border-bottom: 1px solid var(--primary-green);
+            padding: 10px;
+            color: var(--primary-green);
+        }
+
+        .rate-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #222;
         }
 
         .contact-info {
@@ -130,12 +158,48 @@
             </div>
         </div>
 
+        <section>
+            <h2>// CONTRACT_PAYLOAD (Rates)</h2>
+            <div class="card" style="border-style: solid; border-color: var(--primary-green);">
+                <p>>_ Initializing pricing protocols for Great Neck & NYC Metro...</p>
+                <table class="rate-table">
+                    <thead>
+                        <tr>
+                            <th>OPERATION</th>
+                            <th>DURATION</th>
+                            <th>FEE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Birthday Exploit (Kids/Family)</td>
+                            <td>45-60 min</td>
+                            <td>$300+</td>
+                        </tr>
+                        <tr>
+                            <td>Strolling/Close-Up Magic</td>
+                            <td>Per Hour</td>
+                            <td>$200</td>
+                        </tr>
+                        <tr>
+                            <td>Corporate Infiltration</td>
+                            <td>60 min</td>
+                            <td>$500+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">NOTE: Travel fees may apply for targets outside 20 miles of Great Neck.</p>
+                
+                <a href="https://paypal.me/Harkanian" target="_blank" class="btn">DEPLOY BOOKING REQUEST</a>
+            </div>
+        </section>
+
         <div class="contact-info">
             <h2>// ESTABLISH_CONNECTION</h2>
             <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@GabeSMagic" target="_blank">@GabeSMagic</a></p>
             <p><strong>Email:</strong> gabe@jadedsecurity.com</p>
             <p><strong>Phone:</strong> 718-570-5594</p>
-            <a href="https://www.youtube.com/@GabeSMagic" class="btn">SUBSCRIBE NOW</a>
+            <a href="https://www.youtube.com/@GabeSMagic" target="_blank" class="btn">SUBSCRIBE NOW</a>
         </div>
     </div>
 
@@ -144,42 +208,32 @@
     </footer>
 
     <script>
-        // Matrix Background Effect
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%'\"#&_(),.;:?!\\|{}<>[]^~";
         const fontSize = 16;
         const columns = canvas.width / fontSize;
-
         const rainDrops = [];
-        for (let x = 0; x < columns; x++) {
-            rainDrops[x] = 1;
-        }
+        for (let x = 0; x < columns; x++) { rainDrops[x] = 1; }
 
         const draw = () => {
             ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
             ctx.fillStyle = '#0F0';
             ctx.font = fontSize + 'px monospace';
-
             for (let i = 0; i < rainDrops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
                 ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-
                 if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
                     rainDrops[i] = 0;
                 }
                 rainDrops[i]++;
             }
         };
-
         setInterval(draw, 30);
-
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
