@@ -3,7 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabe | Technomancer & Security</title>
+    
+    <title>Gabe's Magic Shows | Technomancer & Cybersecurity Specialist</title>
+    <meta name="description" content="High-tech magic and cybersecurity exploits by Gabe, a 12-year-old Technomancer based in Great Neck. Book cardistry, digital magic, and mind reading.">
+    
+    <meta name="keywords" content="Gabe's Magic Shows, Technomancy, Hacker Magic, Digital Illusionist Great Neck, Cyber Security Magic, Social Engineering Show, iPhone Magic Tricks, Mentalism Exploits, Great Neck Birthday Magician, Nassau County Magic, Sleight of Hand Code, RFID Magic, NFC Magic Tricks, 12-year-old Magician NYC, Tech Magic Performance, Harkanian Magic, Jaded Security Magic, Pentesting Magic, Hacker Illusionist">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gabe's Magic Shows",
+      "image": "https://www.youtube.com/@GabeSMagic", 
+      "description": "Technomancer blending sleight of hand with digital exploits in Great Neck, NY.",
+      "url": "http://jadedsecurity.com",
+      "telephone": "718-570-5594",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Great Neck",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Magic & Security Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital Exploit Magic",
+              "description": "Phone-to-physical card transitions and tech-based mind reading."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "The Birthday Exploit",
+              "description": "High-energy magic shows for kids and families."
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
         :root {
             --primary-green: #00ff41;
@@ -20,7 +66,6 @@
             overflow-x: hidden;
         }
 
-        /* Matrix Background Canvas */
         #canvas {
             position: fixed;
             top: 0;
@@ -90,7 +135,6 @@
             transform: scale(1.05);
         }
 
-        /* Pricing Table Styles */
         .rate-table {
             width: 100%;
             border-collapse: collapse;
@@ -134,13 +178,14 @@
 
     <header>
         <div class="glitch">GABE.EXE</div>
+        <h1>Gabe's Magic Shows</h1>
         <p>Technomancer | Cybersecurity Specialist | Illusionist</p>
     </header>
 
     <div class="container">
         <section>
             <h2>// MISSION_DEBRIEF</h2>
-            <p>I’m a 12-year-old magician blending high-level sleight of hand with digital exploits. Whether I'm infiltrating a network or predicting your passcode, I bridge the gap between magic and technology.</p>
+            <p>I’m a 12-year-old magician blending high-level sleight of hand with digital exploits. Based in <strong>Great Neck, NY</strong>, I bridge the gap between magic and technology.</p>
         </section>
 
         <div class="grid">
@@ -152,7 +197,7 @@
                 <h3>Cybersecurity</h3>
                 <p>Pentesting and social engineering. I find the holes in the system so they can be patched.</p>
             </div>
-            <div class="card">
+            <div class="card)
                 <h3>Cardistry</h3>
                 <p>The classics haven't been forgotten. Elite card handling with a modern twist.</p>
             </div>
@@ -162,6 +207,15 @@
             <h2>// CONTRACT_PAYLOAD (Rates)</h2>
             <div class="card" style="border-style: solid; border-color: var(--primary-green);">
                 <p>>_ Initializing pricing protocols for Great Neck & NYC Metro...</p>
+                
+                <div style="background: rgba(0, 255, 65, 0.1); padding: 15px; border-left: 3px solid var(--primary-green); margin-bottom: 20px;">
+                    <p style="margin: 0; color: var(--primary-green); font-weight: bold;">[!] SCHEDULING_NOTICE:</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.9rem;">
+                        Manual override required for scheduling. <strong>Book at least 1 month in advance</strong> to ensure slot availability. 
+                        Primary operational windows: <strong>Weekends (Sat/Sun)</strong>.
+                    </p>
+                </div>
+
                 <table class="rate-table">
                     <thead>
                         <tr>
@@ -182,14 +236,13 @@
                             <td>$200</td>
                         </tr>
                         <tr>
-                            <td>Corporate Infiltration (Corporate Shows)</td>
+                            <td>Corporate Infiltration</td>
                             <td>60 min</td>
                             <td>$500+</td>
                         </tr>
                     </tbody>
                 </table>
                 <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">NOTE: Travel fees may apply for targets outside 20 miles of Great Neck.</p>
-                
                 <a href="https://paypal.me/Harkanian" target="_blank" class="btn">DEPLOY BOOKING REQUEST</a>
             </div>
         </section>
@@ -212,13 +265,11 @@
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%'\"#&_(),.;:?!\\|{}<>[]^~";
         const fontSize = 16;
         const columns = canvas.width / fontSize;
         const rainDrops = [];
         for (let x = 0; x < columns; x++) { rainDrops[x] = 1; }
-
         const draw = () => {
             ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -227,9 +278,7 @@
             for (let i = 0; i < rainDrops.length; i++) {
                 const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
                 ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    rainDrops[i] = 0;
-                }
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) { rainDrops[i] = 0; }
                 rainDrops[i]++;
             }
         };
