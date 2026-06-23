@@ -205,7 +205,61 @@
                                                         <input type="text" id="location" name="location" required placeholder="e.g., Great Neck NY" style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 300px;">
                                                     </div>
                                                     
-                                                    <button type="submit" class="btn primary-submit">SEND DECRYPTION KEY (Book Slot)</button>
+                   <p style="font-size: 1.2rem; color: var(--primary-green); margin: 20px 0; font-weight: bold;">TOTAL COST: ${price} (Includes Applicable Tax / Service Fee)</p>
+/* Add a pricing script to handle the rate logic for the booking widget */
+<script>
+    // Pricing object derived from the rate table (Section 179-202)
+    const prices = {
+        'birthday': { base: 300, tax_rate: 0.10, name: 'Birthday Exploit' },
+        'corporate': { base: 500, tax_rate: 0.10, name: 'Corporate Infiltration' },
+        'general': { base: 150, tax_rate: 0.10, name: 'Strolling / Close-Up Magic' }
+    };
+
+    const typeSelect = document.getElementById('type');
+    const priceDisplay = document.getElementById('price-display-placeholder'); // Assuming I'll add this ID
+    const totalPriceElement = document.querySelector('.booking-card p:contains("TOTAL COST")').parentNode; // Target the line before the button
+
+    // --- Function to calculate and display price ---
+    function updatePrice() {
+        const selectedType = typeSelect.value;
+        if (!selectedType) {
+            document.querySelector('.booking-card p').innerHTML = 'TOTAL COST: N/A<br><small>(Select service type first to reveal cost parameters)</small>';
+            return;
+        }
+
+        const priceData = prices[selectedType];
+        if (!priceData) return;
+
+        // Calculate total cost with tax
+        const total = priceData.base * (1 + priceData.tax_rate);
+        // Format to a currency string (USD)
+        const formattedTotal = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(total));
+
+        // Update the visible price elements
+        document.querySelector('.booking-card p').innerHTML = `TOTAL COST: ${formattedTotal} (Includes Applicable Tax / Service Fee)`;
+
+        // Optionally, update the button text/link dynamically if possible
+        // In a real app, this data would be sent to the backend for PayPal redirection.
+    }
+
+    // --- Event Listener ---
+    if (typeSelect) {
+        typeSelect.addEventListener('change', updatePrice);
+    }
+
+    // --- Initialization ---
+    function initializePricing() {
+        // Attempt to set initial price on load if a value is pre-selected
+        updatePrice();
+    }
+
+    // Run on load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializePricing);
+    } else {
+        initializePricing();
+    }
+</script>
                                                 </form>
                                                 <p class="warning" style="color: yellow; margin-top: 15px; font-size: 0.8rem;">*** Booking requires confirmation via email/phone. Limited slots available. ***</p>
 
