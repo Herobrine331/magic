@@ -162,49 +162,63 @@
             </div>
         </div>
 
-        <section>
-            <h2>// CONTRACT_PAYLOAD (Rates)</h2>
-            <div class="card" style="border-style: solid; border-color: var(--primary-green);">
-                <p>>_ Initializing pricing protocols for Great Neck & NYC Metro...</p>
-                
-                <div style="background: rgba(0, 255, 65, 0.1); padding: 15px; border-left: 3px solid var(--primary-green); margin-bottom: 20px;">
-                    <p style="margin: 0; color: var(--primary-green); font-weight: bold;">[!] SCHEDULING_NOTICE:</p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.9rem;">
-                        Manual override required for scheduling. <strong>Book at least 1 month in advance</strong> to ensure slot availability. 
-                        Primary operational windows: <strong>Weekends (Sat/Sun)</strong>.
-                    </p>
-                </div>
+                                        <section>
+                                            <h2 class="section-title">// INPUT_DATASTREAM (Testimonials)</h2 class="section-title">
+                                            <div class="testimonial-grid">
+                                                <div class="card testimonial-card">
+                                                    <p class="quote">"Thank you so much for coming and being a good friend to those special needs people and for spending time with them and for giving them your time and having fun with them doing tricks."</p>
+                                                    <p class="source">- Lali Elashvili (Family Client)</p>
+                                                </div>
+                                                <div class="card testimonial-card">
+                                                    <p class="quote">"The most convincing corporate magic show I've ever seen. Total system breach of fun!"</p>
+                                                    <p class="source">- Corporate Client A (HR Dept.)</p>
+                                                </div>
+                                                <div class="card testimonial-card">
+                                                    <p class="quote">"Amazing party entertainment. Truly unique and high-tech. Book him again!"</p>
+                                                    <p class="source">- Happy Birthday Family (Locals)</p>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        
+                                        <section class="booking-section">
+                                            <h2 class="section-title">// INITIATE_BOOKING_PROTOCOL (Bookings)</h2>
+                                            <div class="booking-card" style="border-style: solid; border-color: var(--primary-green); text-align: center;">
+                                                <p class="signal">>>_ ACCESS GRANTED. Select your mission parameters below._</p>
+                                                
+                                                <!-- Simple Placeholder Form for future integration -->
+                                                <form class="booking-form" action="#" method="GET">
+                                                    <div class="form-group">
+                                                        <label for="date">TARGET DATE:</label>
+                                                        <input type="date" id="date" name="date" required style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 200px;">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="type">EVENT TYPE:</label>
+                                                        <select id="type" name="type" required style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 200px;">
+                                                            <option value="" disabled selected>Select Service</option>
+                                                            <option value="birthday">Birthday Exploit (Kids/Family)</option>
+                                                            <option value="corporate">Corporate Infiltration / Seminar</option>
+                                                            <option value="general">Strolling / Close-Up Magic</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="location">LOCATION (Target Address):</label>
+                                                        <input type="text" id="location" name="location" required placeholder="e.g., Great Neck NY" style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 300px;">
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="btn primary-submit">SEND DECRYPTION KEY (Book Slot)</button>
+                                                </form>
+                                                <p class="warning" style="color: yellow; margin-top: 15px; font-size: 0.8rem;">*** Booking requires confirmation via email/phone. Limited slots available. ***</p>
 
-                <table class="rate-table">
-                    <thead>
-                        <tr>
-                            <th>OPERATION</th>
-                            <th>DURATION</th>
-                            <th>FEE</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Birthday Exploit (Kids/Family)</td>
-                            <td>45-60 min</td>
-                            <td>$300+</td>
-                        </tr>
-                        <tr>
-                            <td>Strolling/Close-Up Magic</td>
-                            <td>Per Hour</td>
-                            <td>$150</td>
-                        </tr>
-                        <tr>
-                            <td>Corporate Infiltration</td>
-                            <td>60 min</td>
-                            <td>$500+</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">NOTE: Travel fees may apply for targets outside 20 miles of Great Neck.</p>
-                <a href="https://paypal.me/Harkanian" target="_blank" class="btn">DEPLOY BOOKING REQUEST</a>
-            </div>
-        </section>
+                                            </div >
+                                        </section>
+                                        
+                                        <div class="contact-info">
+                                            <h2>// ESTABLISH_CONNECTION</h2 >
+                                            <p><strong class="signal">[+] YouTube:</strong> <a href="https://www.youtube.com/@GabeSMagic" target="_blank">@GabeSMagic</a></p>
+                                            <p><strong class="signal">[+] Email:</strong> gabe@jadedsecurity.com</p>
+                                            <p><strong class="signal">[+] Phone:</strong> 718-570-5594</p>
+                                            <a href="https://www.youtube.com/@GabeSMagic" target="_blank" class="btn">SUBSCRIBE NOW // INITIATE FEED</a>
+                                        </div >
 
         <div class="contact-info">
             <h2>// ESTABLISH_CONNECTION</h2>
