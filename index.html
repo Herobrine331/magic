@@ -180,88 +180,13 @@
                                             </div>
                                         </section>
                                         
-                                        <section class="booking-section">
-                                            <h2 class="section-title">// INITIATE_BOOKING_PROTOCOL (Bookings)</h2>
-                                            <div class="booking-card" style="border-style: solid; border-color: var(--primary-green); text-align: center;">
-                                                <p class="signal">>>_ ACCESS GRANTED. Select your mission parameters below._</p>
-                                                
-                                                <!-- Simple Placeholder Form for future integration -->
-                                                <form class="booking-form" action="#" method="GET">
-                                                    <div class="form-group">
-                                                        <label for="date">TARGET DATE:</label>
-                                                        <input type="date" id="date" name="date" required style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 200px;">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="type">EVENT TYPE:</label>
-                                                        <select id="type" name="type" required style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 200px;">
-                                                            <option value="" disabled selected>Select Service</option>
-                                                            <option value="birthday">Birthday Exploit (Kids/Family)</option>
-                                                            <option value="corporate">Corporate Infiltration / Seminar</option>
-                                                            <option value="general">Strolling / Close-Up Magic</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="location">LOCATION (Target Address):</label>
-                                                        <input type="text" id="location" name="location" required placeholder="e.g., Great Neck NY" style="background: #0a0a0a; border: 1px solid var(--primary-green); color: white; padding: 10px; width: 300px;">
-                                                    </div>
-                                                    
-                   <p style="font-size: 1.2rem; color: var(--primary-green); margin: 20px 0; font-weight: bold;">TOTAL COST: ${price} (Includes Applicable Tax / Service Fee)</p>
-/* Add a pricing script to handle the rate logic for the booking widget */
-<script>
-    // Pricing object derived from the rate table (Section 179-202)
-    const prices = {
-        'birthday': { base: 300, tax_rate: 0.10, name: 'Birthday Exploit' },
-        'corporate': { base: 500, tax_rate: 0.10, name: 'Corporate Infiltration' },
-        'general': { base: 150, tax_rate: 0.10, name: 'Strolling / Close-Up Magic' }
-    };
-
-    const typeSelect = document.getElementById('type');
-    const priceDisplay = document.getElementById('price-display-placeholder'); // Assuming I'll add this ID
-    const totalPriceElement = document.querySelector('.booking-card p:contains("TOTAL COST")').parentNode; // Target the line before the button
-
-    // --- Function to calculate and display price ---
-    function updatePrice() {
-        const selectedType = typeSelect.value;
-        if (!selectedType) {
-            document.querySelector('.booking-card p').innerHTML = 'TOTAL COST: N/A<br><small>(Select service type first to reveal cost parameters)</small>';
-            return;
-        }
-
-        const priceData = prices[selectedType];
-        if (!priceData) return;
-
-        // Calculate total cost with tax
-        const total = priceData.base * (1 + priceData.tax_rate);
-        // Format to a currency string (USD)
-        const formattedTotal = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }).format(Math.round(total));
-
-        // Update the visible price elements
-        document.querySelector('.booking-card p').innerHTML = `TOTAL COST: ${formattedTotal} (Includes Applicable Tax / Service Fee)`;
-
-        // Optionally, update the button text/link dynamically if possible
-        // In a real app, this data would be sent to the backend for PayPal redirection.
-    }
-
-    // --- Event Listener ---
-    if (typeSelect) {
-        typeSelect.addEventListener('change', updatePrice);
-    }
-
-    // --- Initialization ---
-    function initializePricing() {
-        // Attempt to set initial price on load if a value is pre-selected
-        updatePrice();
-    }
-
-    // Run on load
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializePricing);
-    } else {
-        initializePricing();
-    }
-</script>
-                                                </form>
-                                                <p class="warning" style="color: yellow; margin-top: 15px; font-size: 0.8rem;">*** Booking requires confirmation via email/phone. Limited slots available. ***</p>
+</section></li></div><div class="prices" style="text-align: center; margin-top: 40px;"><h2 style="color: var(--primary-green); margin-bottom: 20px;">// SERVICE_PRICING MATRIX</h2><div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 20px;"><div class="card"><h3 style="color: var(--primary-green);">Birthday Exploit<small><br> (Family)</small></h3><p style="font-size: 1.5rem; color: var(--primary-green); margin: 10px 0;">$300</p><small>Small Fee Applies</small></div><div class="card"><h3 style="color: var(--primary-green);">Corporate Infiltration<small><br> (Business)</small></h3><p style="font-size: 1.5rem; color: var(--primary-green); margin: 10px 0;">$500</p><small>Small Fee Applies</small></div><div class="card"><h3 style="color: var(--primary-green);">Close-Up / General<small><br> (Strolling)</small></h3><p style="font-size: 1.5rem; color: var(--primary-green); margin: 10px 0;">$150</p><small>Small Fee Applies</small></div></div></div></section></div><div class="contact-info">
+            <h2 class="section-title">// ESTABLISH_CONNECTION</h2 >
+            <p><strong class="signal">[+] YouTube:</strong> <a href="https://www.youtube.com/@GabeSMagic" target="_blank">@GabeSMagic</a></p>
+            <p><strong class="signal">[+] Email:</strong> gabe@jadedsecurity.com</p>
+            <p><strong class="signal">[+] Phone:</strong> 718-570-5594</p>
+            <a href="https://www.youtube.com/@GabeSMagic" target="_blank" class="btn">SUBSCRIBE NOW // INITIATE FEED</a>
+        </div >
 
                                             </div >
                                         </section>
